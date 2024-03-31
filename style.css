@@ -97,7 +97,7 @@ section {
 
 .scroll-down {
     position: absolute;
-    bottom: 20px; /* Adjust as needed */
+    bottom: 10%; /* Adjust as needed */
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
@@ -269,4 +269,15 @@ section {
     
 }
 
-
+/* Responsive adjustments for medium screens */
+@media screen and (max-width: 500px) {
+    .block-layout {
+        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
+    }
+    
+    .band-layout {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    
+}
