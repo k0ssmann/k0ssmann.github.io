@@ -1,0 +1,272 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+}
+
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    max-width: 60%; /* Adjust based on your logo */
+    margin-bottom: 20px; /* Space between logo and text */
+    filter: drop-shadow(0 0 10px white);
+}
+
+.event-details h1 {
+    margin: 5px 0; /* Spacing between paragraphs */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adding light drop shadow */
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 80%; /* Larger logo on smaller screens */
+    }
+}
+
+
+section {
+    display: block;
+}
+
+#menu {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center; /* Adjust or remove based on your design */
+}
+
+#menu ul.menu-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center menu items */
+}
+
+#menu ul.menu-items li {
+    margin: 0 15px; /* Space out the menu items */
+}
+
+#menu ul.menu-items li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Adjust based on your design */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#menu ul.menu-items li a:hover {
+    color: #ccc; /* Highlight color on hover or focus */
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional: adds shadow when sticky */
+}
+
+
+/* Existing CSS styles */
+
+.scroll-down {
+    position: absolute;
+    bottom: 20px; /* Adjust as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: #fff;
+    z-index: 10; /* Ensure it's above other content */
+    font-size: 2rem; /* Adjust size of the arrow */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-20px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+.info-section, .bands-section, .anfahrt-section {
+    padding: 50px 20px;
+    position: relative;
+    background-image: url('concert-red.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    z-index: 2;
+}
+
+
+.block-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates two columns */
+    gap: 20px; /* Space between grid items */
+    margin-top: 30px; /* Adds some space between the heading and the grid */
+}
+
+.content-block {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 20px; /* Padding inside each content block */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    color: #fff; /* Text color, adjust as needed */
+}
+
+.info-section h2, .info-section p {
+    position: relative; /* Ensures text is positioned correctly over the fixed background */
+    z-index: 2;
+}
+
+
+.band-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; /* Space between bands */
+    padding: 20px 0;
+}
+
+.band {
+    background-color: rgba(0, 0, 0, 0.5); /* Band card background */
+    padding: 15px;
+    border-radius: 8px; /* Optional: rounded corners for the band cards */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    text-align: center; /* Center content */
+}
+
+.band-image-placeholder {
+    background-color: #000; /* Placeholder background */
+    height: 200px; /* Adjust based on your design */
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px; /* Placeholder text size */
+}
+
+.social-media-icons a {
+    margin: 0 5px; /* Space out icons */
+    color: #FFF; /* Icon color, can use brand colors */
+    text-decoration: none; /* Removes underline from icons */
+}
+
+.social-media-icons i {
+    font-size: 24px; /* Icon size */
+}
+
+.time-schedule {
+    margin-top: 40px; /* Space from the bands grid */
+    background-color: rgba(0, 0, 0, 0.5);  /* Matches the band cards for consistency */
+    padding: 20px;
+    border-radius: 8px; /* Optional: matches the band cards style */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+}
+
+.time-schedule h4 {
+    text-align: center; /* Center the schedule heading */
+    margin-bottom: 20px; /* Space between the heading and the list */
+}
+
+.time-schedule ul {
+    list-style-type: none; /* Removes default list styling */
+    padding: 0;
+}
+
+.time-schedule li {
+    padding: 8px 0; /* Spacing between time slots */
+    border-bottom: 1px solid #eee; /* Visual separator between items */
+}
+
+.time-schedule li:last-child {
+    border-bottom: none; /* Removes border from the last item */
+}
+
+.site-footer {
+    background-color: #333; /* Dark background for the footer */
+    color: #fff; /* Light text color for contrast */
+    text-align: center; /* Center the footer content */
+    padding: 20px 0; /* Add some padding */
+}
+
+.site-footer .footer-content {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center the links horizontally */
+    gap: 20px; /* Space out the links */
+}
+
+.site-footer a {
+    color: #fff; /* Ensures links are also light-colored for contrast */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.site-footer a:hover, .site-footer a:focus {
+    text-decoration: underline; /* Adds underline on hover/focus for accessibility */
+}
+
+@media (max-width: 600px) {
+    .logo-svg {
+        width: 75%; /* Larger percentage for smaller screens */
+        max-width: 150px; /* Optional: Adjust max size for small screens */
+    }
+}
+
+
+/* Additional media queries for larger screens */
+@media (min-width: 768px) {
+    .festival-details {
+        margin-top: 3em; /* Increases spacing on larger screens */
+    }
+    .festival-date, .festival-location, .headliners {
+        font-size: 20px; /* Adjusts font size for readability on larger screens */
+    }
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 375px) {
+    .block-layout {
+        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
+    }
+    
+    .band-layout {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    
+}
+
+
