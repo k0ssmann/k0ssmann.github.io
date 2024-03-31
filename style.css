@@ -38,7 +38,7 @@ video {
     filter: drop-shadow(0 0 10px white);
 }
 
-.event-details h1 {
+.event-details h1, h2, h3 {
     margin: 5px 0; /* Spacing between paragraphs */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adding light drop shadow */
 }
@@ -281,3 +281,4 @@ section {
     
     
 }
+

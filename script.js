@@ -35,14 +35,14 @@ document.querySelectorAll('#menu a[href^="#"]').forEach(anchor => {
     });
 });
 
-var map = L.map('festival-map').setView([52.56936, 9.60162], 80); // Replace Latitude and Longitude with your festival's coordinates
+// var map = L.map('festival-map').setView([52.56936, 9.60162], 80); // Replace Latitude and Longitude with your festival's coordinates
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
-}).addTo(map);
+// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     attribution: '© OpenStreetMap contributors'
+// }).addTo(map);
 
-var marker = L.marker([52.56936, 9.60162],).addTo(map); // Replace Latitude and Longitude as above
-    marker.bindPopup("<b>Freaks of Rock</b>").openPopup();
+// var marker = L.marker([52.56936, 9.60162],).addTo(map); // Replace Latitude and Longitude as above
+//     marker.bindPopup("<b>Freaks of Rock</b>").openPopup();
 
 window.addEventListener('scroll', function() {
     var scrollArrow = document.getElementById('scrollArrow');
