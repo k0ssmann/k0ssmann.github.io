@@ -255,20 +255,6 @@ section {
     }
 }
 
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 375px) {
-    .block-layout {
-        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
-    }
-    
-    .band-layout {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
-    
-}
-
 /* Responsive adjustments for medium screens */
 @media screen and (max-width: 500px) {
     .block-layout {
@@ -281,4 +267,19 @@ section {
     
     
 }
+
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 390px) {
+    .block-layout {
+        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
+    }
+    
+    .band-layout {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    
+}
+
 
