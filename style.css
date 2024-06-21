@@ -131,6 +131,11 @@ section {
     z-index: 2;
 }
 
+.content-block a {
+    color: white;
+    font-size: 16px; /* Adjust based on your design */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
 
 .block-layout {
     display: grid;
@@ -176,6 +181,13 @@ section {
     align-items: center;
     font-size: 20px; /* Placeholder text size */
 }
+
+.band-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover; /* This ensures the image covers the set area without distorting aspect ratio */
+  }
+  
 
 .social-media-icons a {
     margin: 0 5px; /* Space out icons */
