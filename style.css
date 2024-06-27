@@ -325,21 +325,7 @@ a[href^="https://"]:not(.social-media-icons):after {
 }
 
 /* Responsive adjustments for medium screens */
-@media screen and (max-width: 500px) {
-    .block-layout {
-        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
-    }
-    
-    .band-layout {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    
-}
-
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 390px) {
+@media screen and (min-width: 480px) {
     .block-layout {
         grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
     }
@@ -348,7 +334,33 @@ a[href^="https://"]:not(.social-media-icons):after {
         grid-template-columns: repeat(1, 1fr);
     }
     
+}
+
+/* Responsive adjustments for medium screens */
+@media screen and (min-width: 768px) {
+    .block-layout {
+        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
+    }
+    
+    .band-layout {
+        grid-template-columns: repeat(2, 2fr);
+    }
     
 }
+
+/* Responsive adjustments for medium screens */
+@media screen and (min-width: 992px) {
+    .block-layout {
+        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
+    }
+    
+    .band-layout {
+        grid-template-columns: repeat(3, 3fr);
+    }
+    
+}
+
+
+
 
 
