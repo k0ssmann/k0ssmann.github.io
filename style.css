@@ -314,17 +314,6 @@ a[href^="https://"]:not(.social-media-icons):after {
 
 
 
-/* Additional media queries for larger screens */
-@media (min-width: 768px) {
-    .festival-details {
-        margin-top: 3em; /* Increases spacing on larger screens */
-    }
-    .festival-date, .festival-location, .headliners {
-        font-size: 20px; /* Adjusts font size for readability on larger screens */
-    }
-}
-
-/* Responsive adjustments for medium screens */
 @media screen and (min-width: 480px) {
     .block-layout {
         grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
@@ -345,6 +334,13 @@ a[href^="https://"]:not(.social-media-icons):after {
     .band-layout {
         grid-template-columns: repeat(2, 2fr);
     }
+
+    .festival-details {
+        margin-top: 3em; /* Increases spacing on larger screens */
+    }
+    .festival-date, .festival-location, .headliners {
+        font-size: 20px; /* Adjusts font size for readability on larger screens */
+    }
     
 }
 
@@ -356,6 +352,17 @@ a[href^="https://"]:not(.social-media-icons):after {
     
     .band-layout {
         grid-template-columns: repeat(3, 3fr);
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .block-layout {
+        grid-template-columns: 1fr; /* Stacks the blocks into a single column on small screens */
+    }
+    
+    .band-layout {
+        grid-template-columns: repeat(1, 1fr);
     }
     
 }
